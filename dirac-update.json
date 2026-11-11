@@ -1,0 +1,35 @@
+{
+  "payload": {
+    "product": "ari-dirac-login-flow",
+    "schema": 1,
+    "revision": 1,
+    "version": "1.0.0",
+    "notes": "首次发布：已有 Dirac 账号登录流程。",
+    "login_url": "https://id.account.dirac.com/self-service/login/browser",
+    "steps": [
+      {
+        "action": "fill",
+        "selector": "input[name=\"identifier\"]",
+        "value": "{{email}}"
+      },
+      {
+        "action": "click",
+        "selector": "button[name=\"method\"]"
+      },
+      {
+        "action": "fill",
+        "selector": "input[name=\"password\"]",
+        "value": "{{password}}"
+      },
+      {
+        "action": "click",
+        "selector": "button[name=\"method\"]"
+      },
+      {
+        "action": "manual",
+        "message": "登录资料已提交。请查看 Dirac 页面的结果；如需验证，请完成验证。你可以继续使用该网页，结束使用后回到助手点继续保存会话并关闭窗口。"
+      }
+    ]
+  },
+  "signature": "ruhhuIiIaWbnCnZ1uAK1qW940ZuNbhXZD78IAiOHNPm13JEwpPjZa-vBjOIB6TvzBkS1HKj8bjZOY_Qlb7wiCQ"
+}
